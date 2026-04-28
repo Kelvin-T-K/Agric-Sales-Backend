@@ -15,7 +15,10 @@ const app = express();
 
 // Frontend Access
 app.use(cors({
-  origin: "http://localhost:8080",
+  origin: [
+    "http://localhost:8080",
+    "https://agri-sales-system.vercel.app"
+  ],
   credentials: true
 }));
 
