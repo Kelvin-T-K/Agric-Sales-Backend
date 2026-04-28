@@ -23,7 +23,7 @@ const saleSchema = new mongoose.Schema(
     },
     paymentMethod: {
       type: String,
-      enum: ["Cash", "Mobile Money", "Bank Transfer", "Credit"],
+      enum: ["Cash", "Mobile Money", "Bank Transfer", "POS"],
       required: true,
     },
     bags: {
@@ -50,3 +50,4 @@ saleSchema.pre("save", function () {
 
 const Sale = mongoose.model("Sale", saleSchema);
 export default Sale;
+
